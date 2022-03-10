@@ -865,7 +865,7 @@ footer {
 
     .hamburger.active .bar2 {  
         opacity: 0;  
-    }  
+    }
     
     .hamburger.active .bar3 {  
         transform: rotate(-45deg) translate(8px,-3px);  

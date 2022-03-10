@@ -5,8 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+
+        <script src="main.js" type="module" defer></script>
+
         <!-- CUSTOM CSS -->
-        <link rel="stylesheet" href="style/mobile-app.css">
+        <link rel="stylesheet" href="style/app.css">
     </head>
     <body>
         <header>
@@ -50,7 +53,7 @@
                 <div class="categories-title center">
                     <h3>Otro título</h3>
                 </div>
-                <div class="categories-products four-columns">
+                <div class="categories-products desktop-four-columns mobile-single-column">
                     <div class="column">
                         <div class="categories-product">
                             <div class="categories-product-image">
@@ -126,14 +129,18 @@
                 </div>
             </div>
 
-            <div class="services">
-                <div class="services-description center">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis nostrum eligendi est, eos fuga vitae corporis natus libero assumenda? Quam tempore quia quisquam nemo eligendi omnis culpa quaerat tenetur temporibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis pariatur ipsam sed nostrum! Ipsam voluptas sapiente fugit distinctio repudiandae debitis id, in corporis deleniti aspernatur consequatur! Voluptatibus exercitationem rem magnam.</p>
+            <div class="services mobile-single-column">
+                <div class="column">
+                    <div class="services-description center">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis nostrum eligendi est, eos fuga vitae corporis natus libero assumenda? Quam tempore quia quisquam nemo eligendi omnis culpa quaerat tenetur temporibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis pariatur ipsam sed nostrum! Ipsam voluptas sapiente fugit distinctio repudiandae debitis id, in corporis deleniti aspernatur consequatur! Voluptatibus exercitationem rem magnam.</p>
+                    </div>
                 </div>
-
-                <div class="services-image">
-                    <img src="img/ibm-laptop.webp" alt="">
+                <div class="column">
+                    <div class="services-image">
+                        <img src="img/ibm-laptop.webp" alt="">
+                    </div>
                 </div>
+                
             </div>
         </main>
         <footer>

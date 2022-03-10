@@ -7,8 +7,3 @@ menuButton();
 plusMinusButton();
 
 filter();
-<<<<<<< HEAD
-=======
-
-formValidation();
->>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
