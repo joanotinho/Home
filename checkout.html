@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/dolphin.png">
+        <title>Document</title>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+        <script src="scripts/validate.js"></script>
+
+        <script src="main.js" type="module" defer></script>
+        
+
+        <!-- NORMALIZE CSS -->
+        <link rel="stylesheet" href="style/normalize.css">
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="style/app.css">
+    </head>
+    <body>
+        <header>
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="img/ibm-logo.webp" alt="">
+                </div>
+                <div class="title">
+                    <h1>International Business Machines</h1>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="hamburger">
+                    <span class="bar1"></span>  
+                    <span class="bar2"></span>  
+                    <span class="bar3"></span> 
+                </div>
+                <div class="menu">
+                    <ul class="menu-ul">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="checkout-container">
+                <div class="checkout-title">
+                    <h1>Checkout</h1>
+                </div>
+                <div class="desktop-two-columns mobile-single-column checkout-main">
+                    <div class="column">
+                        <div class="checkout-left">
+                            <div class="checkout-title">
+                                <h3>Billing details</h3>
+                            </div>
+<<<<<<< HEAD
+                            <form action="" name="main-form">
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="checkout-two-columns-item">
+                                            <label for="">Nombre</label>
+                                            <input type="text" name="name" id="name">
+=======
+                            <form action="" id="main">
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="checkout-two-columns-item">
+                                            <label for="name">Nombre</label>
+                                            <input type="text" name="" id="name">
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                        </div>
+                                        <div class="messages"></div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="checkout-two-columns-item">
+<<<<<<< HEAD
+                                            <label for="">Apellidos</label>
+                                            <input type="text" name="surnames" id="surnames">
+=======
+                                            <label for="surnames">Apellidos</label>
+                                            <input type="text" name="" id="surnames">
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                        </div>
+                                    </div>
+                                    <div class="messages"></div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+                                        <label for="">Nombre de empresa (opcional)</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                    <div class="messages"></div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+<<<<<<< HEAD
+                                        <label for="">País / Región</label>
+                                        <select name="country" id="country">
+                                            <option value="ES">España</option>
+=======
+                                        <label for="country">País / Región</label>
+                                        <select name="" id="country" class="form-select">
+                                            <option value="spain">España</option>
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                        </select>
+                                        <div class="messages"></div>
+                                    </div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+<<<<<<< HEAD
+                                        <label for="">Dirección</label>
+                                        <input type="text" name="adress" id="adress" placeholder="Número y calle">                                    
+=======
+                                        <label for="street-adress">Dirección</label>
+                                        <input type="text" name="" id="street-adress" placeholder="Número y calle">                                    
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                    </div>
+                                    <div class="messages"></div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+                                        <input type="text" name="" id="" placeholder="apartamento, suite, unidad, etc. (opcional)">
+                                    </div>
+                                    <div class="messages"></div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+<<<<<<< HEAD
+                                        <label for="">Ciudad</label>
+                                        <input type="text" name="city" id="city" placeholder="">
+=======
+                                        <label for="city">Ciudad</label>
+                                        <input type="text" name="" id="city" placeholder="">
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                    </div>
+                                    <div class="messages"></div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+<<<<<<< HEAD
+                                        <label for="">Provincia</label>
+                                        <select name="privince" id="province">
+                                            <option value="">Baleares</option>
+=======
+                                        <label for="province">Provincia</label>
+                                        <select name="" id="province" class="form-select">
+                                            <option value="baleares">Baleares</option>
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                        </select>
+                                    </div>
+                                    <div class="messages"></div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+<<<<<<< HEAD
+                                        <label for="">ZIP</label>
+                                        <input type="text" name="zip" id="zip" placeholder="">
+=======
+                                        <label for="zip">ZIP</label>
+                                        <input type="text" name="" id="zip" placeholder="">
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                    </div>
+                                    <div class="messages"></div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+<<<<<<< HEAD
+                                        <label for="">Teléfono</label>
+                                        <input type="tel" name="tel" id="tel" placeholder="">
+=======
+                                        <label for="telephone-number">Teléfono</label>
+                                        <input type="tel" name="" id="telephone-number" placeholder="">
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                    </div>
+                                    <div class="messages"></div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+<<<<<<< HEAD
+                                        <label for="">Dirección Email</label>
+                                        <input type="email" name="email" id="email" placeholder="">
+=======
+                                        <label for="email">Dirección Email</label>
+                                        <input type="email" name="" id="email" placeholder="">
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                    </div>
+                                    <div class="messages"></div>
+                                </div>
+                                
+                                <div class="place-order-button">
+                                    <button form="main" type="submit">Place order</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="checkout-right">
+                            <div class="checkout-title">
+                                <h3>Tu pedido</h3>
+                            </div>
+                            <div class="checkout-right-main">
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <span>Producto</span>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <span>Subtotal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <span>Producto</span>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <span>Subtotal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <div class="product">
+                                                <span>Red sweatshirt</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <div class="price">
+                                                <span>15.00€</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <div class="subtotal-title">
+                                                <span>Subtotal</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <div class="subtotal-price">
+                                                <span>15.00€</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <div class="total-title">
+                                                <span>Total</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="checkout-main-item">
+                                            <div class="total-price">
+                                                <span>15.00€</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+                                        <div class="payment-methods">
+                                            <div class="payment-method mobile-single-column">
+                                                <div class="column">
+                                                    <input type="radio" name="" id="">
+                                                    <label for="">Transferencia bancaria</label>
+                                                    <div class="payment-method-description">
+                                                        <p>Make your payment directly into our bank account. Please use your order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account</p>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="payment-method">
+                                                <div class="desktop-two-columns mobile-single-column">
+                                                    <div class="column">
+                                                        <input type="radio" name="" id="">
+                                                        <label for="">PayPal</label>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="payment-method-img">
+                                                            <img src="" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-single-column">
+                                    <div class="column">
+                                        <div class="place-order">
+                                            <div class="place-order-description">
+                                                <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purpouses described in our privacy policy</p>
+                                            </div>
+<<<<<<< HEAD
+                                            <div class="place-order-button">
+                                                <button type="submit
+                                                ">Place order</button>
+                                            </div>
+=======
+>>>>>>> 5a6386725fef5a74f9bae4176f9663716068282e
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="copyright center">
+                <p>@2048</p>
+            </div>
+
+            <div class="footer-info desktop-three-columns mobile-single-column">
+                <div class="footer-info-links column">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, dolor perferendis? Aut voluptate debitis doloribus soluta veritatis accusamus tempora, doloremque, mollitia recusandae repellendus corrupti animi quo commodi culpa, cum autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quam nobis perspiciatis id ipsam facilis laboriosam vero est temporibus odio ad, dolores minima, quod laborum dolore voluptas, fuga nam molestiae.
+                </div>
+                <div class="footer-info-contact column">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente adipisci, blanditiis pariatur amet nobis ab enim mollitia maxime. Consequuntur totam iure non magnam molestiae modi sequi laudantium nisi ipsa repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, exercitationem harum commodi ullam eaque omnis vitae earum soluta incidunt fugiat architecto perspiciatis sapiente vel, a velit reiciendis beatae possimus. Maxime.
+                </div>
+                <div class="footer-info-map column">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, doloremque ipsum. Non inventore eligendi ratione in aut? Dolores libero aperiam, porro officiis quibusdam distinctio molestias commodi natus dolor, sunt ipsam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nobis ab praesentium culpa velit molestias ipsa. Ipsa ex, hic voluptate minus a consequuntur? Ipsam veritatis illum harum hic soluta provident!
+                </div>
+            </div>
+        </footer>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    </body>
+</html>

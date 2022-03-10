@@ -1,0 +1,21 @@
+.slider {
+    height: 34vh;
+
+    .slider-title {
+        top: 30%;
+
+        h2 {
+            font-size: 1.5em;
+        }
+    }
+
+    .slider-button {
+        top: 50%;
+        left: 35%;
+    }
+
+    .slider-image img {
+        width: 100%;
+        margin: 13% 0 0 0;
+    }
+}

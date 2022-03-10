@@ -1,0 +1,22 @@
+.desktop-cart {
+    display: none;
+}
+
+.mobile-cart {
+    display: block;
+    padding: 0 10%;
+    width: 80%;
+
+    .cart-product {
+        border: .1em solid #ccc;
+        border-radius: .3em;
+        margin-top: .5em;
+        padding: .5em;
+    }
+    
+    .cart-taxes {
+        margin-top: 2em;
+    }
+}
+
+

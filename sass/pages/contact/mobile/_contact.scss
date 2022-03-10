@@ -1,0 +1,34 @@
+.contact-main {
+    justify-content: center;
+    background: rgb(31, 50, 255, .9);
+    border-radius: .4em;
+    padding: .2em;
+
+    .contact-info {
+        .contact-info-item {
+            justify-content: center;
+            margin-bottom: 1em;
+
+            .contact-form-item-button {
+                text-align: center;
+            }
+
+            input {
+                background-color: transparent;
+                border-bottom: .1em solid rgba(255, 255, 255, 1);
+                border-radius: 0;
+                color: rgba(255, 255, 255, 1);
+                margin-bottom: .5em;
+            }
+
+            textarea {
+                width: 95%;
+                background-color: transparent;
+                border-bottom: .1em solid rgba(255, 255, 255, 1);
+                border-radius: 0;
+                color: rgba(255, 255, 255, 1);
+                margin-bottom: .5em;
+            }
+        }
+    }
+}

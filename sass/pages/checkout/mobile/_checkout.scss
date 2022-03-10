@@ -1,0 +1,19 @@
+.checkout-main {
+    .checkout-left .desktop-two-columns {
+        display: flex;
+        justify-content: space-between;
+
+        .column input {
+            width: 7.5em;
+        }
+    }
+
+    .checkout-right .payment-method {
+        margin: .5em 0;
+        background: #eee;
+
+        .column {
+            text-align: left;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.mobile-single-column {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .column {
+        width: 95%;
+        padding: 0 2.5%;
+        justify-content: center;
+        text-align: center;
+        margin: .2em 0;
+    }
+}
+
+.mobile-two-columns {
+    display: flex;
+    width: 100%;
+    
+    .column {
+        width: 50%;
+    }
+}
