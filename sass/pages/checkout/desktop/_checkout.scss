@@ -53,17 +53,9 @@
                 width: 100%;
             }
 
-            .desktop-two-columns .column {
-                width: max-content;
-
-                input {
-                    width: max-content;
-                }
-
-                .checkout-two-columns-item {
-                    display: flex;
-                    flex-direction: column;
-                    width: 70%;
+            .desktop-two-columns {
+                .column {
+                    width: 10em;
                 }
             }
         }

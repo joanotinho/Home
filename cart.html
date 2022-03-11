@@ -9,7 +9,10 @@
         <script src="main.js" type="module" defer></script>
 
         <!-- CUSTOM CSS -->
-        <link rel="stylesheet" href="style/app.css">
+            <!-- DESKTOP CSS -->
+            <link rel="stylesheet" media="only screen and (min-width: 500px)" href="style/app.css">
+            <!-- MOBILE CSS -->
+            <link rel="stylesheet" media="only screen and (max-width: 500px)" href="style/mobile-app.css">
     </head>
     <body>
         <header>
@@ -108,7 +111,9 @@
                     <div class="column">
                         <div class="mobile-single-column">
                             <div class="column">
-                                <span>MSI Optix G241 23.8" LED IPS FullHD 144Hz FreeSync</span>    
+                                <div class="cart-title">
+                                    <span>MSI Optix G241 23.8" LED IPS FullHD 144Hz FreeSync</span>  
+                                </div>  
                             </div>
                         </div>
                         <div class="mobile-single-column">
@@ -140,7 +145,7 @@
                 </div>
                 <div class="cart-taxes-container">
                     <div class="cart-taxes">
-                        <div class="desktop-two-columns cart-tax">
+                        <div class="desktop-two-columns mobile-two-columns cart-tax">
                             <div class="column">
                                 <span>21% de IVA</span>
                             </div>
@@ -148,7 +153,7 @@
                                 <span>39.69€</span>
                             </div>
                         </div>
-                        <div class="desktop-two-columns cart-tax">
+                        <div class="desktop-two-columns mobile-two-columns cart-tax">
                             <div class="column">
                                 <span>Gastos de envío</span>
                             </div>
@@ -156,7 +161,7 @@
                                 <span>11,99€</span>
                             </div>
                         </div>
-                        <div class="desktop-two-columns cart-tax">
+                        <div class="desktop-two-columns mobile-two-columns cart-tax">
                             <div class="column">
                                 <span>Total</span>
                             </div>
@@ -166,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="continue-button center">
+                <div class="featured-button center">
                     <button>Siguiente</button>
                 </div>
             </div>

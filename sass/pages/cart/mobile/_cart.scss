@@ -12,11 +12,18 @@
         border-radius: .3em;
         margin-top: .5em;
         padding: .5em;
+
+        .column {
+            width: 100%;
+        }
     }
     
     .cart-taxes {
         margin-top: 2em;
+        text-align: center;
+    }
+
+    .featured-button {
+        margin: 1.3rem 0;
     }
 }
-
-

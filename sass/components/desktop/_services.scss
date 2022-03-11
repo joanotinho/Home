@@ -1,17 +1,8 @@
-
 .services {
-    display: flex;
-    justify-content: space-between;
-
-    .services-description{
-        width: 45%;
-
-        p{
-            font-size: 2em;
-        }
-    }
-    
-    .services-image{
-        width: 45%;
+    justify-content: center;
+    .services-description {
+        height: max-content;
+        vertical-align: middle;
+        width: 70%;
     }
 }

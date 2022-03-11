@@ -372,6 +372,11 @@ video {
   max-width: 100%;
 }
 
+svg {
+  width: 100%;
+  height: 1em;
+}
+
 textarea {
   width: 100%;
   resize: none;
@@ -436,7 +441,7 @@ body {
 }
 
 main {
-  margin-top: 6em;
+  margin-top: 10vh;
   width: 100%;
 }
 
@@ -449,7 +454,7 @@ header {
   top: 0;
   padding: 1% 10%;
   width: 80%;
-  z-index: 1000;
+  z-index: 10000;
 }
 header .nav-left {
   display: flex;
@@ -495,6 +500,7 @@ header .nav-right .menu ul li a {
 footer {
   background-color: #f5f5f5;
   border-top: 0.1em solid black;
+  padding: 1rem;
 }
 footer .copyright {
   margin: 1em;
@@ -654,17 +660,12 @@ footer .copyright {
 }
 
 .services {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .services .services-description {
-  width: 45%;
-}
-.services .services-description p {
-  font-size: 2em;
-}
-.services .services-image {
-  width: 45%;
+  height: max-content;
+  vertical-align: middle;
+  width: 70%;
 }
 
 .desktop-cart {
@@ -769,15 +770,7 @@ footer .copyright {
   width: 100%;
 }
 .checkout-container .checkout-main .checkout-left .desktop-two-columns .column {
-  width: max-content;
-}
-.checkout-container .checkout-main .checkout-left .desktop-two-columns .column input {
-  width: max-content;
-}
-.checkout-container .checkout-main .checkout-left .desktop-two-columns .column .checkout-two-columns-item {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
+  width: 10em;
 }
 .checkout-container .checkout-main .checkout-right .desktop-single-column .column {
   width: 100%;
@@ -813,10 +806,14 @@ footer .copyright {
   margin: 2em;
 }
 .contact .contact-main {
-  justify-content: center;
-  background: rgba(31, 50, 255, 0.9);
+  justify-content: space-between;
+  background: rgba(61, 61, 61, 0.6);
   border-radius: 0.4em;
-  padding: 1em;
+  padding: 1em 10%;
+  width: 80%;
+}
+.contact .contact-main .column {
+  width: max-content;
 }
 .contact .contact-main .contact-info {
   display: inline;
@@ -833,6 +830,7 @@ footer .copyright {
 }
 .contact .contact-main .contact-info .contact-info-item .contact-info-text {
   margin: 0 0.6em;
+  width: 100%;
 }
 .contact .contact-main .contact-form form .column {
   width: 94%;

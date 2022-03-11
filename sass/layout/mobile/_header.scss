@@ -1,18 +1,23 @@
 header {
-    background-color: #fff;
-    border-bottom: .1em solid #eee;
     display: flex;
     justify-content: space-between;
     position: fixed;
     top: 0;
-    padding: 1% 10%;
-    width: 80%;
+    padding: 0;
+    width: 100%;
     z-index: 1000;
     
     .nav-left {
-        display: flex;
-        justify-content: space-around;
         align-items: center;
+        background-color: #fff;
+        border-bottom: .1em solid #ccc;
+        display: flex;
+        padding: .6rem 0;
+        padding-left: 5%;
+        padding-right: 100%;
+        position: relative;
+        width: 100%;
+        z-index: 2000;
 
         .logo {
             white-space: nowrap;
@@ -21,6 +26,7 @@ header {
 
         .title{
             padding: 0 1em;
+            white-space: nowrap;
 
             h1 {
                 font-size: .8rem;
@@ -35,8 +41,9 @@ header {
         .hamburger {
             display: block;
             position: absolute;
-            right: 0;
-            z-index: 2000;
+            right: 1rem;
+            top: .6rem;
+            z-index: 3000;
 
             .bar1,.bar2,.bar3{  
                 display:block;  
@@ -61,23 +68,30 @@ header {
         }
 
         .menu{
-            position: absolute;
             left: 0;
             margin-top: 3em;
+            top: -200vh;
+            position: absolute;
             transition: top .4s ease-in-out;
-            top: -100vh;
+            height: 0vh;
             width: 100%;
 
             &.active {
+                bottom: 0;
+                position: absolute;
                 top: 0;
                 z-index: 1000;
             }
             ul {
-                background-color: #efefefee;
-                box-shadow: 0 .4em .3em .2em rgba(0, 0, 0, 0.2);
+                background-color: #f5f5f5;
+                bottom: 0;
                 display: flex;
                 flex-direction: column;
-                margin: 0;
+                height: 100vh;
+                margin-top: -15rem;
+                padding-top: 15rem;
+                position: absolute;
+                top: 20vh;
                 width: 100%;
         
                 li{
