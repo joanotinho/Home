@@ -17,7 +17,6 @@
 
         input {
             background-color: #eee;
-            border: none;
             border-radius: .3em;
             padding: .3em;
 
@@ -29,7 +28,6 @@
 
         select {
             background: #eee;
-            border: none;
             padding: .2em;
             border-radius: .3em;
 
@@ -40,6 +38,10 @@
             option {
                 background: #ddd;
             }
+        }
+
+        input, textarea, select {
+            color: rgba(0, 0, 0, .5);
         }
 
         .checkout-left {

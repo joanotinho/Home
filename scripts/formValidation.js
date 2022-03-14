@@ -22,10 +22,26 @@ export function formValidation() {
         email: {
           // Email is required
           presence: true,
-          // and must be an email (duh)
+          // must be an email
           email: true
         },
-        name: {
+        nombre: {
+          // You need to pick a username too
+          presence: true,
+          // And it must be between 3 and 20 characters long
+          length: {
+            minimum: 3,
+            maximum: 20
+          },
+          format: {
+            // We don't allow anything that a-z and 0-9
+            pattern: "[a-z]+",
+            // but we don't care if the username is uppercase or lowercase
+            flags: "i",
+            message: "solo puede contener letras"
+          }
+        },
+        apellidos: {
           // You need to pick a username too
           presence: true,
           // And it must be between 3 and 20 characters long
@@ -41,37 +57,21 @@ export function formValidation() {
             message: "can only contain letters"
           }
         },
-        surnames: {
-          // You need to pick a username too
-          presence: true,
-          // And it must be between 3 and 20 characters long
-          length: {
-            minimum: 3,
-            maximum: 20
-          },
-          format: {
-            // We don't allow anything that a-z and 0-9
-            pattern: "[a-z]+",
-            // but we don't care if the username is uppercase or lowercase
-            flags: "i",
-            message: "can only contain letters"
-          }
-        },
-        country: {
+        pais: {
           // You also need to input where you live
           presence: true,
           // And we restrict the countries supported to Spain
           inclusion: {
             within: ["Spain"],
             // The ^ prevents the field name from being prepended to the error
-            message: "^Sorry, this service is for Spain only"
+            message: "^Lo sentimos, este servicio es solo para España"
           }
         },
-        adress: {
+        direccion: {
           // You need to pick a username too
           presence: true,
         },
-        city: {
+        ciudad: {
           // You need to pick a username too
           presence: true,
           // And it must be between 3 and 20 characters long
@@ -87,7 +87,7 @@ export function formValidation() {
             message: "can only contain letters"
           }
         },
-        province: {
+        provincia: {
           // You need to pick a username too
           presence: true,
           // And it must be between 3 and 20 characters long
@@ -119,13 +119,13 @@ export function formValidation() {
           format: {
             // We don't allow anything that a-z and 0-9
             pattern: "[0-9]+",
-            // but we don't care if the username is uppercase or lowercase
+            // but we don't care if the phonenumber is only numbers
             flags: "i",
             message: "can only contain numbers"
           }
         },
         paymentmethod: {
-          // You need to pick a username too
+          // You need to pick a payment method too
           presence: true,
         },
       };
@@ -162,6 +162,16 @@ export function formValidation() {
         _.each(form.querySelectorAll("input[name], select[name]"), function(input) {
           // Since the errors can be null if no errors were found we need to handle
           // that
+          showErrorsForInput(input, errors);
+        });
+      }
+
+      // Updates the inputs with the validation errors
+      function showErrors(form, errors) {
+        // We loop through all the inputs and show the errors for that input
+        _.each(form.querySelectorAll("input[name], select[name]"), function(input) {
+          // Since the errors can be null if no errors were found we need to handle
+          // that
           showErrorsForInput(input, errors && errors[input.name]);
         });
       }
@@ -179,7 +189,7 @@ export function formValidation() {
           // we first mark the group has having errors
           formGroup.classList.add("has-error");
           // then we append all the errors
-          _.each(errors, function(error) {
+          errors.forEach(error => {
             addError(messages, error);
           });
         } else {
@@ -187,9 +197,43 @@ export function formValidation() {
           formGroup.classList.add("has-success");
         }
       }
+
+      // top attempt
+      function showErrorsForInputTop(input, errors) {
+        // This is the root of the input
+        var formGroupTop = closestParent(input.parentNode, "error-warning")
+          // Find where the error messages will be insert into
+          , messages = formGroupTop.querySelector(".messages");
+        // First we remove any old messages and resets the classes
+        resetFormGroup(formGroupTop);
+        // If we have errors
+        if (errors) {
+          // we first mark the group has having errors
+          formGroupTop.classList.add("has-error");
+          // then we append all the errors
+          errors.forEach(error => {
+            addErrorTop(messages, error);
+          });
+        } else {
+          // otherwise we simply mark it as success
+          formGroupTop.classList.add("has-success");
+        }
+      }
   
       // Recusively finds the closest parent that has the specified class
       function closestParent(child, className) {
+        if (!child || child == document) {
+          return null;
+        }
+        if (child.classList.contains(className)) {
+          return child;
+        } else {
+          return closestParent(child.parentNode, className);
+        }
+      }
+
+      // top attempt 
+      function closestParentTop(child, className) {
         if (!child || child == document) {
           return null;
         }
@@ -205,13 +249,25 @@ export function formValidation() {
         formGroup.classList.remove("has-error");
         formGroup.classList.remove("has-success");
         // and remove any old messages
-        _.each(formGroup.querySelectorAll(".help-block.error"), function(el) {
+        formGroup.querySelectorAll(".help-block.error").forEach(el => {
+          el.parentNode.removeChild(el);
+        });
+      }
+
+      // top attempt
+      function resetFormGroup(formGroupTop) {
+        // Remove the success and error classes
+        formGroupTop.classList.remove("has-error");
+        formGroupTop.classList.remove("has-success");
+        // and remove any old messages
+        formGroupTop.querySelectorAll(".help-block.error").forEach(el => {
           el.parentNode.removeChild(el);
         });
       }
   
       // Adds the specified error with the following markup
       // <p class="help-block error">[message]</p>
+
       function addError(messages, error) {
         var block = document.createElement("p");
         block.classList.add("help-block");
@@ -219,12 +275,21 @@ export function formValidation() {
         block.innerText = error;
         messages.appendChild(block);
       }
-  
+
+      // top attempt
+      function addErrorTop(messages, error) {
+        var block = document.createElement("p");
+        block.classList.add("help-block");
+        block.classList.add("error");
+        block.innerText = error;
+        messages.appendChild(block);
+        errorWarning.appendChild(error);
+      }
+
       function showSuccess() {
         // We made it \:D/
         alert("Success!");
       }
     })();
   }
-  
 }

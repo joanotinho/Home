@@ -1,0 +1,13 @@
+.has-error {
+    input, textarea, select {
+        border: .1em solid #f00;
+    }
+    .messages {
+        margin-top: .4rem;
+    }
+
+    .messages p {
+        color: #f00c;
+        font-size: .9rem;
+    }
+}

@@ -386,6 +386,10 @@ textarea {
   text-align: center;
 }
 
+input, textarea, select {
+  border: none;
+}
+
 h1, h2, h3, h4 {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -581,6 +585,17 @@ footer .copyright {
   margin: 1em;
 }
 
+.has-error input, .has-error textarea, .has-error select {
+  border: 0.1em solid #f00;
+}
+.has-error .messages {
+  margin-top: 0.4rem;
+}
+.has-error .messages p {
+  color: #f00c;
+  font-size: 0.9rem;
+}
+
 .featured-button {
   left: 12%;
   position: absolute;
@@ -739,7 +754,6 @@ footer .copyright {
 }
 .checkout-container .checkout-main input {
   background-color: #eee;
-  border: none;
   border-radius: 0.3em;
   padding: 0.3em;
 }
@@ -749,7 +763,6 @@ footer .copyright {
 }
 .checkout-container .checkout-main select {
   background: #eee;
-  border: none;
   padding: 0.2em;
   border-radius: 0.3em;
 }
@@ -758,6 +771,9 @@ footer .copyright {
 }
 .checkout-container .checkout-main select option {
   background: #ddd;
+}
+.checkout-container .checkout-main input, .checkout-container .checkout-main textarea, .checkout-container .checkout-main select {
+  color: rgba(0, 0, 0, 0.5);
 }
 .checkout-container .checkout-main .checkout-left {
   padding: 0 5%;
