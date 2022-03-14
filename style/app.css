@@ -585,6 +585,19 @@ footer .copyright {
   margin: 1em;
 }
 
+.error-warning.active {
+  background-color: #eee;
+  border-radius: 0.5em;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+  width: 70%;
+}
+.error-warning.active p {
+  color: #f00;
+  margin: 0.6em;
+}
+
 .has-error input, .has-error textarea, .has-error select {
   border: 0.1em solid #f00;
 }

@@ -1,3 +1,19 @@
+.error-warning {
+    &.active {
+        background-color: #eee;
+        border-radius: .5em;
+        margin: auto;
+        padding: 1em;
+        text-align: center;
+        width: 70%;
+        
+        p {
+            color: #f00;
+            margin: .6em;
+        }
+    }
+}
+
 .has-error {
     input, textarea, select {
         border: .1em solid #f00;
