@@ -179,11 +179,14 @@ export function formValidation() {
           // we first mark the group has having errors
           formGroup.classList.add("has-error");
           // then we append all the errors
-          const errorWarning = document.querySelector(".error-warning");
-          errorWarning.classList.add('active')
-          const p = document.createElement('p');
-          p.textContent = errors;
-          errorWarning.appendChild(p);
+          const errorWarningContainer = document.querySelector(".error-warning-container");
+          const errorWarning = document.querySelector(".error-warning")
+          errorWarningContainer.classList.add('active');
+          const li = document.createElement('li');
+          const span = document.createElement('span');
+          span.textContent = errors;
+          errorWarning.appendChild(li);
+          li.appendChild(span)
         } else {
           // otherwise we simply mark it as success
           formGroup.classList.add("has-success");
@@ -216,8 +219,7 @@ export function formValidation() {
       // <p class="help-block error">[message]</p>
 
       function addError(messages, error) {
-        const errorWarning = document.querySelector(".error-warning")
-        var block = document.createElement("p");
+        var block = document.createElement("span");
         block.classList.add("help-block");
         block.classList.add("error");
         block.innerText = error;
