@@ -1,19 +1,21 @@
-export function form() {
+export function formData() {
     const submitButton = document.getElementById('submit');
     const formElem = document.getElementById('form-elem');
     
     submitButton.addEventListener('click', (e) => {
         e.preventDefault();
 
-        const formData = new FormData(formElem);
-        fetch('./contacto.html', {
+        const data = new FormData(formElem);
+        fetch('../contacto.html', {
             method: 'POST',
-            body: formData
+            body: data
         })
         .then(function(response) {
             if (response.ok) {
                 return response.text()
-            } else {throw "aprendé a dar verga PUTO"}
+            } else {
+                throw "Error en la llamada Ajax";
+            }
         })
         .then(function(texto) {
             console.log(texto);

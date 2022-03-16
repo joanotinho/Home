@@ -61,22 +61,55 @@
         }
     }
     .tabs-container {
-        width: 50%;
+        width: max-content;
 
         .tabs {
-            .tab {
-                border: .1em solid #000;
+            justify-content: start;
+
+            .desktop-three-columns {
+                justify-content: start;
+                .column {
+                    width: max-content;
+                    .tab {
+                        border: .1rem solid #000;
+                        font-weight: 400;
+                        padding: .5rem .8rem;
+                        position: relative;
+                        width: max-content;
+
+                        span {
+                            color: #000b;
+                        }
+
+                        &.active {
+                            background-color: #fa0;
+                            text-align: center;
+                            padding: .5rem 1.2rem;
+
+                            span {
+                                color: #000;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                }            
             }
         }
 
-        .tabs-content {
+        .tab-content {
+            padding: .6rem 1rem;
             position: absolute;
-            background-color: #fefefe;
+            width: 30%;
 
             &.active {
-                z-index: 1000;
+                z-index: 2000;
+                background-color: #fff;
             }
         }
-
+        #tab-content-1 {
+            z-index: 1000;
+            background-color: #fff;
+        }
     }
 }

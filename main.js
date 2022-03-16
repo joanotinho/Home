@@ -3,7 +3,7 @@ import {plusMinusButton} from "./scripts/plusMinusButton.js";
 import {filter} from "./scripts/filter.js";
 import {formValidation} from "./scripts/formValidation.js";
 import {closeElement} from "./scripts/closeElement.js";
-import {form} from "./scripts/formData.js"
+import {formData} from "./scripts/formData.js"
 
 menuButton();
 
@@ -15,4 +15,4 @@ formValidation();
 
 closeElement();
 
-form();
+formData();
