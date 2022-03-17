@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="img/dolphin.png">
         <title>Document</title>
 
         <script src="main.js" type="module" defer></script>
@@ -16,6 +15,10 @@
             <link rel="stylesheet" media="only screen and (min-width: 500px)" href="style/app.css">
             <!-- MOBILE CSS -->
             <link rel="stylesheet" media="only screen and (max-width: 500px)" href="style/mobile-app.css">
+
+        
+            <script src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js"></script>
+
     </head>
     <body>
         <header>
@@ -110,51 +113,50 @@
                     </div>
                     <div class="column">
                         <div class="contact-form">
-                            <form autocomplete="off" id="form-elem" method="post">
-                                <div class="desktop-two-columns mobile-single-column">
-                                    <div class="column">
-                                        <div class="contact-form-item">
-                                            <input type="text" name="name" id="" placeholder="Nombre:">
+                                <form method="POST" action="#" id="form-elem">
+                                    <div class="desktop-two-columns mobile-single-column">
+                                        <div class="column">
+                                            <div class="contact-form-item">
+                                                <input type="text" name="name" id="" placeholder="Nombre:">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="contact-form-item">
-                                            <input type="text" name="surnames" id="surname" placeholder="Apellidos:">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="desktop-two-columns mobile-single-column">
-                                    <div class="column">
-                                        <div class="contact-form-item">
-                                            <input type="text" name="mail" id="" placeholder="Email:">
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="contact-form-item">
-                                            <input type="text" name="telephone" id="" placeholder="Número de teléfono:">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="desktop-single-column mobile-single-column">
-                                    <div class="column">
-                                        <div class="contact-form-item">
-                                            <textarea name="comment" id="" placeholder="Escríbenos un comentario (opcional)"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="desktop-single-column mobile-single-column">
-                                    <div class="column">
-                                        <div class="contact-form-item">
-                                            <div class="contact-form-item-button" id="submit">
-                                                <button>Enviar</button>
+                                        <div class="column">
+                                            <div class="contact-form-item">
+                                                <input type="text" name="surnames" id="surname" placeholder="Apellidos:">
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                    <div class="desktop-two-columns mobile-single-column">
+                                        <div class="column">
+                                            <div class="contact-form-item">
+                                                <input type="text" name="mail" id="" placeholder="Email:">
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="contact-form-item">
+                                                <input type="text" name="telephone" id="" placeholder="Número de teléfono:">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="desktop-single-column mobile-single-column">
+                                        <div class="column">
+                                            <div class="contact-form-item">
+                                                    <textarea class="ckeditor" name="content" id="editor" placeholder="Escríbenos un comentario (opcional)"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="desktop-single-column mobile-single-column">
+                                        <div class="column">
+                                            <div class="contact-form-item">
+                                                <div class="contact-form-item-button" id="submit">
+                                                    <button type="submit" id="button">Enviar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </main>
@@ -175,5 +177,13 @@
                 </div>
             </div>
         </footer>
+        <script src="main.js" type="module"></script>
+        <script>
+            ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .catch( error => {
+                    console.error( error );
+                } );
+        </script>
     </body>
 </html>
