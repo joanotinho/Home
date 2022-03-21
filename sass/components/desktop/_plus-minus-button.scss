@@ -27,8 +27,8 @@
           }
     }
     
-    .spinner-button {
-        cursor: default;
+    .stock-button {
+        cursor: pointer;
         display: flex;
         font-weight: 600;
         height: 2em;
@@ -37,6 +37,7 @@
 
         button {
             border: none;
+            cursor: pointer;
             text-align: center;
             border-radius: 0;
             width: 4em;

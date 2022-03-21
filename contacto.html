@@ -6,8 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
 
-        <script src="main.js" type="module" defer></script>
-
         <!-- NORMALIZE CSS -->
         <link rel="stylesheet" href="style/normalize.css">
         <!-- CUSTOM CSS -->
@@ -141,7 +139,9 @@
                                     <div class="desktop-single-column mobile-single-column">
                                         <div class="column">
                                             <div class="contact-form-item">
-                                                    <textarea class="ckeditor" name="content" id="editor" placeholder="Escríbenos un comentario (opcional)"></textarea>
+                                                <textarea name="content" id="editor">
+                                                    Hola que tal estas
+                                                </textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -178,12 +178,5 @@
             </div>
         </footer>
         <script src="main.js" type="module"></script>
-        <script>
-            ClassicEditor
-                .create( document.querySelector( '#editor' ) )
-                .catch( error => {
-                    console.error( error );
-                } );
-        </script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@ckeditor/ckeditor5-autosave": "^33.0.0",
     "@ckeditor/ckeditor5-basic-styles": "^33.0.0",
     "@ckeditor/ckeditor5-build-balloon": "^33.0.0",
     "@ckeditor/ckeditor5-build-balloon-block": "^33.0.0",

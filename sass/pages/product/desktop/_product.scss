@@ -101,9 +101,10 @@
             padding: .6rem 1rem;
             position: absolute;
             width: 30%;
+            display: none;
 
             &.active {
-                z-index: 2000;
+                display: block;
                 background-color: #fff;
             }
         }

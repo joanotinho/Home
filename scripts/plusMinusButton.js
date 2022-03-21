@@ -1,30 +1,41 @@
 export function plusMinusButton() {
-    const plusButtons = document.querySelectorAll('.plus-button');
-    const minusButtons = document.querySelectorAll('.minus-button');
+
+    const stockButtons = document.querySelectorAll('.stock-button');
     const numberDisplays = document.querySelectorAll('.number-display');
 
-    if (plusButtons != null) {
-        plusButtons.forEach(plusButton => {
-            plusButton.addEventListener('click', () => {
-                numberDisplays.forEach(numberDisplay => {
-                    numberDisplay.value++;
-                });
-            });
-        });
-        
-        minusButtons.forEach(minusButton => {
-            minusButton.addEventListener('click', () => {
-                numberDisplays.forEach(numberDisplay => {
-                    numberDisplay.value--;
-                    
-                    if (numberDisplay.value < 0) {
-                        numberDisplay.value = 0;
-                    }
-                });
-    
-                
-            });
+    stockButtons.forEach(stockButton => {
+        stockButton.addEventListener ('click', () => {
+            stockButton.classList.add('active')
+            
+            if (stockButton.dataset.stockButtonValue == "+") {
+                plusButtonIncrease();
+            }
+
+            if (stockButton.dataset.stockButtonValue == "-") {
+                minusButtonDecrease()
+            }
+        })
+    });
+
+    function plusButtonIncrease() {
+        numberDisplays.forEach(numberDisplay => {
+            numberDisplay.value++;
         });
     }
 
+    function minusButtonDecrease() {
+        for (let i = 0; i < numberDisplays; i++) {
+            numberDisplays.value++;
+        }
+        numberDisplays.forEach(numberDisplay => {
+            numberDisplay.value--;
+
+            if (numberDisplay.value < 0) {
+                numberDisplay.value = 0;
+            };
+        });
+    }
+    stockButtons.forEach(stockButton => {
+        console.log(stockButton.dataset.stockButtonValue); 
+    });
 }

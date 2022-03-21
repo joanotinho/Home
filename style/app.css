@@ -674,16 +674,17 @@ footer .copyright {
   -moz-appearance: textfield;
   caret-color: transparent;
 }
-.stock-counter .spinner-button {
-  cursor: default;
+.stock-counter .stock-button {
+  cursor: pointer;
   display: flex;
   font-weight: 600;
   height: 2em;
   margin: 0;
   z-index: 2;
 }
-.stock-counter .spinner-button button {
+.stock-counter .stock-button button {
   border: none;
+  cursor: pointer;
   text-align: center;
   border-radius: 0;
   width: 4em;
@@ -1017,9 +1018,10 @@ footer .copyright {
   padding: 0.6rem 1rem;
   position: absolute;
   width: 30%;
+  display: none;
 }
 .product-datasheet .tabs-container .tab-content.active {
-  z-index: 2000;
+  display: block;
   background-color: #fff;
 }
 .product-datasheet .tabs-container #tab-content-1 {
