@@ -1,41 +1,22 @@
 export function plusMinusButton() {
 
-    const stockButtons = document.querySelectorAll('.stock-button');
-    const numberDisplays = document.querySelectorAll('.number-display');
+    const buttons = document.querySelectorAll('.stock-button');
 
-    stockButtons.forEach(stockButton => {
-        stockButton.addEventListener ('click', () => {
-            stockButton.classList.add('active')
-            
-            if (stockButton.dataset.stockButtonValue == "+") {
-                plusButtonIncrease();
+    buttons.forEach(button => {
+        const buttonParent = button.closest(".stock-counter");
+        const display = buttonParent.children[1];
+        button.addEventListener('click', () => {
+            if (button.dataset.stockButtonValue == '+') {
+                display.value++;
             }
 
-            if (stockButton.dataset.stockButtonValue == "-") {
-                minusButtonDecrease()
+            if (button.dataset.stockButtonValue == '-') {
+                display.value--;
+
+                if (display.value < 0) {
+                    display.value = 0;
+                };
             }
         })
-    });
-
-    function plusButtonIncrease() {
-        numberDisplays.forEach(numberDisplay => {
-            numberDisplay.value++;
-        });
-    }
-
-    function minusButtonDecrease() {
-        for (let i = 0; i < numberDisplays; i++) {
-            numberDisplays.value++;
-        }
-        numberDisplays.forEach(numberDisplay => {
-            numberDisplay.value--;
-
-            if (numberDisplay.value < 0) {
-                numberDisplay.value = 0;
-            };
-        });
-    }
-    stockButtons.forEach(stockButton => {
-        console.log(stockButton.dataset.stockButtonValue); 
     });
 }
