@@ -1,23 +1,27 @@
-import { ckEditorRender } from "./ckeditor.js";
-import '../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js'
-
 export function formData() {
+
     const submitButton = document.getElementById('submit');
 
     if (submitButton) {
 
-        const formElem = document.getElementById('form-elem');
+        const form = document.getElementById('form-elem');
     
         submitButton.addEventListener('click', (e) => {
+
             e.preventDefault();
 
             let data = new formData(form);
             let url = form.action;
 
             if( ckeditors != 'null'){
+
                 Object.entries(ckeditors).forEach(([key, value]) => {
                     data.append(key, value.getData());
                 });
+            }
+
+            for (var pair of data.entries()) {
+                console.log(pair[0]+ ', ' + pair[1]); 
             }
     
             fetch('', {
