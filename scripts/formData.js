@@ -1,33 +1,28 @@
+import { ckEditorRender } from "./ckeditor.js";
+import '../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js'
+
 export function formData() {
     const submitButton = document.getElementById('submit');
 
-    if (submitButton != null) {
-
-        var editorData;
-
-        ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .then(editor => {
-                editorData = editor;
-            })
-            .catch( error => {
-                console.error( error )
-            } )
-        
-            function getDataFromTheEditor() {
-                console.log(editorData.getData())
-            }
+    if (submitButton) {
 
         const formElem = document.getElementById('form-elem');
     
         submitButton.addEventListener('click', (e) => {
             e.preventDefault();
+
+            let data = new formData(form);
+            let url = form.action;
+
+            if( ckeditors != 'null'){
+                Object.entries(ckeditors).forEach(([key, value]) => {
+                    data.append(key, value.getData());
+                });
+            }
     
-            const data = new FormData(formElem);
-            
             fetch('', {
                 method: 'POST',
-                body: getDataFromTheEditor()
+                body: data
             })
             
             .then(function(response) {

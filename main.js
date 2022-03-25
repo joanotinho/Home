@@ -7,15 +7,9 @@ import {formData} from "./scripts/formData.js";
 import {productDescription} from "./scripts/productDescription.js";
 
 menuButton();
-
 plusMinusButton();
-
 filter();
-
 formValidation();
-
 closeElement();
-
 productDescription();
-
 formData();
