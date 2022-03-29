@@ -4,7 +4,9 @@ export let ckEditorRender = () => {
 
     window.ckeditors = [];
 
-    document.querySelectorAll('.ckeditor').forEach(ckeditor => {
+    const ckeditors = document.querySelectorAll('.ckeditor');
+
+    ckeditors.forEach(ckeditor => {
         ClassicEditor.create(ckeditor)
             .then( classicEditor => {
                 ckeditors[ckeditor.name] = classicEditor;

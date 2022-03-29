@@ -4,7 +4,7 @@ export function formData() {
 
     if (submitButton) {
 
-        const form = document.getElementById('form-elem');
+    const form = document.getElementById('form');
     
         submitButton.addEventListener('click', (e) => {
 
@@ -20,9 +20,10 @@ export function formData() {
                 });
             }
 
-            for (var pair of data.entries()) {
-                console.log(pair[0]+ ', ' + pair[1]); 
-            }
+            
+            // for (let pair of data.entries()) {
+            //     console.log(pair[0] + ', ' + pair[1]); 
+            // }
     
             fetch('', {
                 method: 'POST',
