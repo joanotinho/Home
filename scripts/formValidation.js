@@ -2,7 +2,7 @@ import JustValidate from '../node_modules/just-validate/dist/just-validate.es.js
 
 export function formValidation() {
 
-  const form = document.querySelector('.form');
+  const form = document.querySelector('#form');
 
   if (form) {
     const validation = new JustValidate('#form');
