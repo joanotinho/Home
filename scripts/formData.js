@@ -4,45 +4,47 @@ export function formData() {
 
     if (submitButton) {
 
-    const form = document.getElementById('form');
-    
-        submitButton.addEventListener('click', (e) => {
+        const forms = document.querySelectorAll('#form');
 
-            e.preventDefault();
+        forms.forEach(form => {
 
-            let data = new formData(form);
-            let url = form.action;
+            submitButton.addEventListener('click', (e) => {
 
-            if( ckeditors != 'null'){
+                e.preventDefault();
 
-                Object.entries(ckeditors).forEach(([key, value]) => {
-                    data.append(key, value.getData());
-                });
-            }
+                let data = new formData(form);
 
-            
-            // for (let pair of data.entries()) {
-            //     console.log(pair[0] + ', ' + pair[1]); 
-            // }
-    
-            fetch('', {
-                method: 'POST',
-                body: data
-            })
-            
-            .then(function(response) {
-                if (response.ok) {
-                    return response.text()
-                } else {
-                    throw "Error en la llamada Ajax";
+                if (ckeditors != 'null'){
+
+                    Object.entries(ckeditors).forEach(([key, value]) => {
+                        data.append(key, value.getData());
+                    });
+
+                    Object.entries(data).forEach((pair) => {
+                        console.log(pair[0] + ', ' + pair[1]);
+                    });
                 }
-            })
-            .then(function(texto) {
-                console.log(texto)
-            })
-            .catch(function(err) {
-                console.log(err)
-            })
+
+        
+                fetch('', {
+                    method: 'POST',
+                    body: data
+                })
+                
+                .then(function(response) {
+                    if (response.ok) {
+                        return response.text()
+                    } else {
+                        throw "Error en la llamada Ajax";
+                    }
+                })
+                .then(function(texto) {
+                    console.log(texto)
+                })
+                .catch(function(err) {
+                    console.log(err)
+                })
+            });    
         });
     }
 }

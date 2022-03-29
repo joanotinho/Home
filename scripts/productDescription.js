@@ -9,9 +9,7 @@ export function productDescription() {
         tab.addEventListener('click', () => {
 
             tabs.forEach(tab => {
-
                 tab.classList.remove('active');
-
             });
             
             tabContents.forEach(tabContent => {

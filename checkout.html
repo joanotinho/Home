@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="img/dolphin.png">
         <title>Document</title>
 
         <script src="main.js" type="module" defer></script>
@@ -46,7 +45,7 @@
                 <div class="title">
                     <h1>Checkout</h1>
                 </div>
-                <form method="POST" action="#" id="main">
+                <form method="POST" action="#" id="form">
                     <div class="desktop-two-columns mobile-single-column checkout-main">
                         <div class="column">
                             <div class="checkout-left">
@@ -67,12 +66,12 @@
                                 <div class="desktop-two-columns mobile-single-column">
                                     <div class="column">
                                         <label for="name">Nombre</label>
-                                        <input type="text" name="nombre" id="name">
+                                        <input type="text" name="name" id="name">
                                         <div class="messages"></div>
                                     </div>
                                     <div class="column">
                                         <label for="surnames">Apellidos</label>
-                                        <input type="text" name="apellidos" id="surnames">
+                                        <input type="text" name="surnames" id="surnames">
                                         <div class="messages"></div>
                                     </div>
                                 </div>
@@ -86,7 +85,7 @@
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="country">País / Región</label>
-                                        <select id="country" name="pais">
+                                        <select id="country" name="country">
                                             <option value="">Select your country</option>
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
@@ -341,7 +340,7 @@
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="adress">Dirección</label>
-                                        <input type="text" name="direccion" id="adress" placeholder="Número y calle"> 
+                                        <input type="text" name="adress" id="adress" placeholder="Número y calle"> 
                                         <div class="messages"></div>                                   
                                     </div>
                                 </div>
@@ -353,14 +352,14 @@
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="city">Ciudad</label>
-                                        <input type="text" name="ciudad" id="city" placeholder="">
+                                        <input type="text" name="city" id="city" placeholder="">
                                         <div class="messages"></div>
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="province">Provincia</label>
-                                        <select required name="provincia" class="form-control">
+                                        <select required name="province" class="form-control">
                                             <option value="blank">Select your province</option>
                                             <option value="Álava/Araba">Álava/Araba</option>
                                             <option value="Albacete">Albacete</option>
@@ -437,6 +436,11 @@
                                         <label for="email">Dirección Email</label>
                                         <input type="email" name="email" id="email" placeholder="">
                                         <div class="messages"></div>
+                                    </div>
+                                </div>
+                                <div class="desktop-single-column mobile-single-column">
+                                    <div class="place-order-button">
+                                        <button class="btn btn-primary" id="submit-btn">Place order</button>
                                     </div>
                                 </div>
                             </div>
@@ -573,7 +577,7 @@
                                                     <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purpouses described in our privacy policy</p>
                                                 </div>
                                                 <div class="place-order-button">
-                                                    <button type="submit">Place order</button>
+                                                    <button class="btn btn-primary" id="submit-btn">Place order</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -602,12 +606,5 @@
                 </div>
             </div>
         </footer>
-        
-        <!-- Optional libraries I am using in this tutorial -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-        
-        <!-- Library we are trying to use today -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     </body>
 </html>

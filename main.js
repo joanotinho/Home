@@ -5,7 +5,7 @@ import {formValidation} from "./scripts/formValidation.js";
 import {closeElement} from "./scripts/closeElement.js";
 import {formData} from "./scripts/formData.js";
 import {productDescription} from "./scripts/productDescription.js";
-import {ckEditorRender } from "./scripts/ckeditor.js";
+import {ckeditor} from "./scripts/ckeditor.js";
 
 menuButton();
 plusMinusButton();
@@ -14,4 +14,4 @@ formValidation();
 closeElement();
 productDescription();
 formData();
-ckEditorRender();
+ckeditor();
