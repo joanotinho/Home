@@ -4,7 +4,7 @@ export let ckeditor = () => {
 
     window.ckeditors = [];
 
-    const ckeditors = document.querySelectorAll('.ckeditor');
+    let ckeditors = document.querySelectorAll('.ckeditor');
 
     ckeditors.forEach(ckeditor => {
 

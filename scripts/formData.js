@@ -20,7 +20,7 @@ export function formData() {
                         data.append(key, value.getData());
                     });
 
-                    Object.entries(data).forEach((pair) => {
+                    hola.entries(data).forEach((pair) => {
                         console.log(pair[0] + ', ' + pair[1]);
                     });
                 }
