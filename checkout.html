@@ -45,14 +45,15 @@
                 <div class="title">
                     <h1>Checkout</h1>
                 </div>
-                <form method="POST" action="#" id="form">
+                <form enctype="multipart/form-data" class="front-form" id="checkout-form">
+                    <div id="errors-container"></div>
                     <div class="desktop-two-columns mobile-single-column checkout-main">
                         <div class="column">
                             <div class="checkout-left">
                                 <div class="checkout-title">
                                     <h3>Billing details</h3>
                                 </div>
-                                <div class="error-warning-container">
+                                <!-- <div class="error-warning-container">
                                     <ul class="error-warning parent">
                                         
                                     </ul>
@@ -61,31 +62,27 @@
                                             <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
                                         </svg>
                                     </div>
-                                    
-                                </div>
+                                </div> -->
                                 <div class="desktop-two-columns mobile-single-column">
                                     <div class="column">
                                         <label for="name">Nombre</label>
-                                        <input type="text" name="name" id="name">
-                                        <div class="messages"></div>
+                                        <input type="text" name="name" id="name" class="required">
                                     </div>
                                     <div class="column">
                                         <label for="surnames">Apellidos</label>
-                                        <input type="text" name="surnames" id="surnames">
-                                        <div class="messages"></div>
+                                        <input type="text" name="surnames" id="surnames" class="required">
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="">Nombre de empresa (opcional)</label>
                                         <input type="text" name="" id="">
-                                        <div class="messages"></div>
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="country">País / Región</label>
-                                        <select id="country" name="country">
+                                        <select id="country" name="country" class="required">
                                             <option value="">Select your country</option>
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
@@ -334,14 +331,12 @@
                                             <option value="Zambia">Zambia</option>
                                             <option value="Zimbabwe">Zimbabwe</option>
                                          </select>
-                                        <div class="messages"></div>
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="adress">Dirección</label>
-                                        <input type="text" name="adress" id="adress" placeholder="Número y calle"> 
-                                        <div class="messages"></div>                                   
+                                        <input type="text" name="adress" id="adress" placeholder="Número y calle" class="required">                                    
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
@@ -352,14 +347,13 @@
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="city">Ciudad</label>
-                                        <input type="text" name="city" id="city" placeholder="">
-                                        <div class="messages"></div>
+                                        <input type="text" name="city" id="city" placeholder="" class="required">
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="province">Provincia</label>
-                                        <select required name="province" class="form-control">
+                                        <select required name="province" id="province" class="required">
                                             <option value="blank">Select your province</option>
                                             <option value="Álava/Araba">Álava/Araba</option>
                                             <option value="Albacete">Albacete</option>
@@ -414,33 +408,24 @@
                                             <option value="Zamora">Zamora</option>
                                             <option value="Zaragoza">Zaragoza</option>
                                           </select>
-                                        <div class="messages"></div>
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="zip">ZIP</label>
-                                        <input type="text" name="zip" id="zip" placeholder="">
-                                        <div class="messages"></div>
+                                        <input type="text" name="zip" id="zip" placeholder="" class="required">
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="phonenumber">Teléfono</label>
-                                        <input type="tel" name="phonenumber" id="phonenumber" placeholder="">
-                                        <div class="messages"></div>
+                                        <input type="tel" name="phonenumber" id="phonenumber" placeholder="" class="required">
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="email">Dirección Email</label>
-                                        <input type="email" name="email" id="email" placeholder="">
-                                        <div class="messages"></div>
-                                    </div>
-                                </div>
-                                <div class="desktop-single-column mobile-single-column">
-                                    <div class="place-order-button">
-                                        <button class="btn btn-primary" id="submit-btn">Place order</button>
+                                        <input type="email" name="email" id="email" placeholder="" class="required">
                                     </div>
                                 </div>
                             </div>
@@ -526,18 +511,15 @@
                                     <div class="payment-methods">
                                         <div class="desktop-two-columns">
                                             <div class="column">
-                                                <div class="messages"></div>
                                                 <div class="payment-method mobile-single-column">
                                                     <div class="column">
                                                         <input type="radio" name="paymentmethod" id="wiretransfer" name="wiretransfer">
                                                         <label for="wiretransfer">Transferencia bancaria</label>
-                                                        <div class="messages"></div>
                                                     </div>
                                                     
                                                 </div>
                                             </div>
                                             <div class="column">
-                                                <div class="messages"></div>
                                             </div>
                                         </div>
                                             
@@ -560,13 +542,11 @@
                                                             <label for="cars">Tarjeta de crétido/débito</label>
                                                         </div>
                                                         <div class="column">
-                                                            <div class="messages"></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="column">
-                                                <div class="messages"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -577,7 +557,7 @@
                                                     <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purpouses described in our privacy policy</p>
                                                 </div>
                                                 <div class="place-order-button">
-                                                    <button class="btn btn-primary" id="submit-btn">Place order</button>
+                                                    <button class="submit-button" id="submit-button" type="submit">Place order</button>
                                                 </div>
                                             </div>
                                         </div>

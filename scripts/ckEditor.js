@@ -9,12 +9,11 @@ export let ckeditor = () => {
     ckeditors.forEach(ckeditor => {
 
         ClassicEditor.create(ckeditor)
-        
-            .then( classicEditor => {
-                ckeditors[ckeditor.name] = classicEditor;
-            })
-            .catch( error => {
-                console.error(error);
-            } );
+        .then( classicEditor => {
+            ckeditors[ckeditor.name] = classicEditor;
+        })
+        .catch( error => {
+            console.error(error);
+        } );
     });
 }
