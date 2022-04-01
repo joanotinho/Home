@@ -1,32 +1,36 @@
 import JustValidate from "../node_modules/just-validate/dist/just-validate.es.js";
 
 export let validator = (form) => {
+  
 
   const elements = document.querySelectorAll('.required');
 
-  let validate = new JustValidate('#' + form.id,
-    {
-      errorFieldCssClass: 'is-invalid',
-      errorLabelStyle: {
-          color: 'red',
-          fontsize: '14px',
-      },
-      focusInvalidField: true,
-      lockForm: true,
-      errorContainer: '#errors-container',
-    }
-  )
+    let validate = new JustValidate('#' + form.id,
+      {
+        errorFieldCssClass: 'is-invalid',
+        errorLabelStyle: {
+            color: 'red',
+            fontsize: '14px',
+        },
+        focusInvalidField: true,
+        lockForm: true,
+        errorContainer: '#errors-container',
+      }
+    )
     elements.forEach(element => {
 
-      validate
+      if (!element.classList.contains('is-invalid')) {
+        
+        validate
+        // En caso de que cada elemento que tenga la clase 'required' esté vacío, avisar con error
         .addField('#' + element.id, [
           {
             rule: 'required',
-            errorMessage: 'Este campo no puede estar vacio'
+            errorMessage: 'el campo ' +  element.dataset.type + ' no puede estar vacio'
           }
         ])
+      }
     });
     
     return validate;
-
 };

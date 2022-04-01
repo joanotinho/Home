@@ -12,39 +12,19 @@ export function formData() {
 
                 e.preventDefault();
 
-                let data = new formData(form);
+                let formData = new FormData(form);
 
                 if (ckeditors != 'null'){
 
                     Object.entries(ckeditors).forEach(([key, value]) => {
-                        data.append(key, value.getData());
+                        formData.append(key, value.getData());
                     });
 
-                    hola.entries(data).forEach((pair) => {
+                    for(var pair of formData.entries()) {
                         console.log(pair[0] + ', ' + pair[1]);
-                    });
-                }
-
-        
-                fetch('', {
-                    method: 'POST',
-                    body: data
-                })
-                
-                .then(function(response) {
-                    if (response.ok) {
-                        return response.text()
-                    } else {
-                        throw "Error en la llamada Ajax";
                     }
-                })
-                .then(function(texto) {
-                    console.log(texto)
-                })
-                .catch(function(err) {
-                    console.log(err)
-                })
-            });    
+                }
+            });
         });
     }
 }

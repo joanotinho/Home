@@ -46,7 +46,6 @@
                     <h1>Checkout</h1>
                 </div>
                 <form enctype="multipart/form-data" class="front-form" id="checkout-form">
-                    <div id="errors-container"></div>
                     <div class="desktop-two-columns mobile-single-column checkout-main">
                         <div class="column">
                             <div class="checkout-left">
@@ -66,11 +65,11 @@
                                 <div class="desktop-two-columns mobile-single-column">
                                     <div class="column">
                                         <label for="name">Nombre</label>
-                                        <input type="text" name="name" id="name" class="required">
+                                        <input type="text" name="name" id="name" class="required" data-type="nombre">
                                     </div>
                                     <div class="column">
                                         <label for="surnames">Apellidos</label>
-                                        <input type="text" name="surnames" id="surnames" class="required">
+                                        <input type="text" name="surnames" id="surnames" class="required" data-type="apellidos">
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
@@ -82,7 +81,7 @@
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="country">País / Región</label>
-                                        <select id="country" name="country" class="required">
+                                        <select id="country" name="country" class="required" data-type="país">
                                             <option value="">Select your country</option>
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
@@ -336,7 +335,7 @@
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="adress">Dirección</label>
-                                        <input type="text" name="adress" id="adress" placeholder="Número y calle" class="required">                                    
+                                        <input type="text" name="adress" id="adress" placeholder="Número y calle" class="required" data-type="dirección">                                    
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
@@ -347,13 +346,13 @@
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="city">Ciudad</label>
-                                        <input type="text" name="city" id="city" placeholder="" class="required">
+                                        <input type="text" name="city" id="city" placeholder="" class="required" data-type="ciudad">
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="province">Provincia</label>
-                                        <select required name="province" id="province" class="required">
+                                        <select required name="province" id="province" class="required" data-type="provincia">
                                             <option value="blank">Select your province</option>
                                             <option value="Álava/Araba">Álava/Araba</option>
                                             <option value="Albacete">Albacete</option>
@@ -413,19 +412,19 @@
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="zip">ZIP</label>
-                                        <input type="text" name="zip" id="zip" placeholder="" class="required">
+                                        <input type="text" name="zip" id="zip" placeholder="" class="required" data-type="zip">
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="phonenumber">Teléfono</label>
-                                        <input type="tel" name="phonenumber" id="phonenumber" placeholder="" class="required">
+                                        <input type="tel" name="phonenumber" id="phonenumber" placeholder="" class="required" data-type="teléfono">
                                     </div>
                                 </div>
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="email">Dirección Email</label>
-                                        <input type="email" name="email" id="email" placeholder="" class="required">
+                                        <input type="email" name="email" id="email" placeholder="" class="required" data-type="email">
                                     </div>
                                 </div>
                             </div>
@@ -551,6 +550,7 @@
                                         </div>
                                     </div>
                                     <div class="desktop-single-column mobile-single-column">
+                                        <div id="errors-container"></div>
                                         <div class="column">
                                             <div class="place-order">
                                                 <div class="place-order-description">
