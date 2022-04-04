@@ -52,16 +52,6 @@
                                 <div class="checkout-title">
                                     <h3>Billing details</h3>
                                 </div>
-                                <!-- <div class="error-warning-container">
-                                    <ul class="error-warning parent">
-                                        
-                                    </ul>
-                                    <div class="close" id="close-button">
-                                        <svg viewBox="0 0 24 24">
-                                            <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-                                        </svg>
-                                    </div>
-                                </div> -->
                                 <div class="desktop-two-columns mobile-single-column">
                                     <div class="column">
                                         <label for="name">Nombre</label>
@@ -550,7 +540,7 @@
                                         </div>
                                     </div>
                                     <div class="desktop-single-column mobile-single-column">
-                                        <div id="errors-container"></div>
+                                        <div class="errors-container active"></div>
                                         <div class="column">
                                             <div class="place-order">
                                                 <div class="place-order-description">
@@ -567,6 +557,52 @@
                         </div>
                     </div>
                 </form>
+                
+                <form method="POST" action="" id="form" class="front-form">
+                    <div class="desktop-two-columns mobile-single-column">
+                        <div class="column">
+                            <div class="contact-form-item">
+                                <input type="text" name="name" id="name" placeholder="Nombre:" class="required" data-type="nombre">
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="contact-form-item">
+                                <input type="text" name="surnames" id="surname" placeholder="Apellidos:" class="required" data-type="apellidos">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desktop-two-columns mobile-single-column">
+                        <div class="column">
+                            <div class="contact-form-item">
+                                <input type="text" name="mail" id="mail" placeholder="Email:" class="required" data-type="email">
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="contact-form-item">
+                                <input type="text" name="telephone" id="telephone" placeholder="Número de teléfono:" class="required" data-type="telefono">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desktop-single-column mobile-single-column">
+                        <div class="column">
+                            <div class="contact-form-item">
+                                <textarea name="content" id="editor" class="ckeditor required" data-type="comentario">
+                                    
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desktop-single-column mobile-single-column">
+                        <div class="column">
+                            <div class="contact-form-item">
+                                <div class="contact-form-item-button" id="submit">
+                                    <button type="submit" id="button" class="submit-button">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
             </div>
         </main>
         <footer>

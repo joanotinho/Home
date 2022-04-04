@@ -5,9 +5,10 @@ export let renderForm = () => {
     const forms = document.querySelectorAll('.front-form');
     const submitButton = document.querySelector('.submit-button');
 
+
     if (submitButton) {
 
-        submitButton.addEventListener('click', () => {
+        // submitButton.addEventListener('click', () => {
             
             forms.forEach(form => {
 
@@ -21,12 +22,11 @@ export let renderForm = () => {
                         console.log(pair[0] + ', ' + pair[1])
                     }
                 })
-                
+
                 validate.onFail(() => {
-                    
                 });
             });
-        })
+        // })
     }
 
 }

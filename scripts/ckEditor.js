@@ -1,16 +1,15 @@
-import '../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js'
+import '../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js';
 
 export let ckeditor = () => {
 
-    window.ckeditors = [];
+    let editors = document.querySelectorAll('.ckeditor');
 
-    let ckeditors = document.querySelectorAll('.ckeditor');
+    window.ckeditors = ckeditor;
+    
+    editors.forEach(editor => {
 
-    ckeditors.forEach(ckeditor => {
-
-        ClassicEditor.create(ckeditor)
-        .then( classicEditor => {
-            ckeditors[ckeditor.name] = classicEditor;
+        ClassicEditor.create(editor)
+        .then( editor => {
         })
         .catch( error => {
             console.error(error);

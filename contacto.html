@@ -107,50 +107,50 @@
                     </div>
                     <div class="column">
                         <div class="contact-form">
-                                <form method="POST" action="" id="form">
-                                    <div class="desktop-two-columns mobile-single-column">
-                                        <div class="column">
-                                            <div class="contact-form-item">
-                                                <input type="text" name="name" id="name" placeholder="Nombre:">
-                                            </div>
+                            <form method="POST" action="" id="form" class="front-form">
+                                <div class="desktop-two-columns mobile-single-column">
+                                    <div class="column">
+                                        <div class="contact-form-item">
+                                            <input type="text" name="name" id="name" placeholder="Nombre:" class="required" data-type="nombre">
                                         </div>
-                                        <div class="column">
-                                            <div class="contact-form-item">
-                                                <input type="text" name="surnames" id="surname" placeholder="Apellidos:">
+                                    </div>
+                                    <div class="column">
+                                        <div class="contact-form-item">
+                                            <input type="text" name="surnames" id="surname" placeholder="Apellidos:" class="required" data-type="apellidos">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-two-columns mobile-single-column">
+                                    <div class="column">
+                                        <div class="contact-form-item">
+                                            <input type="text" name="mail" id="mail" placeholder="Email:" class="required" data-type="email">
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="contact-form-item">
+                                            <input type="text" name="telephone" id="telephone" placeholder="Número de teléfono:" class="required" data-type="telefono">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-single-column mobile-single-column">
+                                    <div class="column">
+                                        <div class="contact-form-item">
+                                            <textarea name="content" id="editor" class="ckeditor required" data-type="comentario">
+                                                
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-single-column mobile-single-column">
+                                    <div class="column">
+                                        <div class="contact-form-item">
+                                            <div class="contact-form-item-button" id="submit">
+                                                <button type="submit" id="button" class="submit-button">Enviar</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="desktop-two-columns mobile-single-column">
-                                        <div class="column">
-                                            <div class="contact-form-item">
-                                                <input type="text" name="mail" id="mail" placeholder="Email:">
-                                            </div>
-                                        </div>
-                                        <div class="column">
-                                            <div class="contact-form-item">
-                                                <input type="text" name="telephone" id="telephone" placeholder="Número de teléfono:">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="desktop-single-column mobile-single-column">
-                                        <div class="column">
-                                            <div class="contact-form-item">
-                                                <textarea name="content" id="editor" class="ckeditor">
-                                                    
-                                                </textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="desktop-single-column mobile-single-column">
-                                        <div class="column">
-                                            <div class="contact-form-item">
-                                                <div class="contact-form-item-button" id="submit">
-                                                    <button type="submit" id="button">Enviar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
