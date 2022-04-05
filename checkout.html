@@ -342,8 +342,8 @@
                                 <div class="desktop-single-column mobile-single-column">
                                     <div class="column">
                                         <label for="province">Provincia</label>
-                                        <select required name="province" id="province" class="required" data-type="provincia">
-                                            <option value="blank">Select your province</option>
+                                        <select id="province" name="province" class="required" data-type="província">
+                                            <option value="">Select your province</option>
                                             <option value="Álava/Araba">Álava/Araba</option>
                                             <option value="Albacete">Albacete</option>
                                             <option value="Alicante">Alicante</option>
@@ -557,52 +557,32 @@
                         </div>
                     </div>
                 </form>
-                
-                <form method="POST" action="" id="form" class="front-form">
-                    <div class="desktop-two-columns mobile-single-column">
+                <!-- <form enctype="multipart/form-data" class="front-form" id="checkout-form">
+                    <div class="errors-container"></div>
+                    <div class="desktop-two-columns">
                         <div class="column">
-                            <div class="contact-form-item">
-                                <input type="text" name="name" id="name" placeholder="Nombre:" class="required" data-type="nombre">
-                            </div>
+                            <label for="name">Nombre:</label>
+                            <input type="text" name="name" id="name" class="required">
                         </div>
                         <div class="column">
-                            <div class="contact-form-item">
-                                <input type="text" name="surnames" id="surname" placeholder="Apellidos:" class="required" data-type="apellidos">
-                            </div>
+                            <label for="surnames">Apellidos:</label>
+                            <input type="text" name="surnames" id="surnames" class="required">
                         </div>
                     </div>
-                    <div class="desktop-two-columns mobile-single-column">
+                    <div class="desktop-two-columns">
                         <div class="column">
-                            <div class="contact-form-item">
-                                <input type="text" name="mail" id="mail" placeholder="Email:" class="required" data-type="email">
-                            </div>
+                            <label for="email">email:</label>
+                            <input type="text" name="email" id="email" class="required">
                         </div>
                         <div class="column">
-                            <div class="contact-form-item">
-                                <input type="text" name="telephone" id="telephone" placeholder="Número de teléfono:" class="required" data-type="telefono">
-                            </div>
+                            <label for="phonenumber">telefono:</label>
+                            <input type="text" name="phonenumber" id="phonenumber" class="required">
                         </div>
                     </div>
-                    <div class="desktop-single-column mobile-single-column">
-                        <div class="column">
-                            <div class="contact-form-item">
-                                <textarea name="content" id="editor" class="ckeditor required" data-type="comentario">
-                                    
-                                </textarea>
-                            </div>
-                        </div>
+                    <div class="desktop-single-column">
+                        <button id="submit-button" class="submit-button" type="submit">Submit</button>
                     </div>
-                    <div class="desktop-single-column mobile-single-column">
-                        <div class="column">
-                            <div class="contact-form-item">
-                                <div class="contact-form-item-button" id="submit">
-                                    <button type="submit" id="button" class="submit-button">Enviar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                
+                </form> -->
             </div>
         </main>
         <footer>

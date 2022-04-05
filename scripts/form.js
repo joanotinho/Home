@@ -4,11 +4,11 @@ export let renderForm = () => {
 
     const forms = document.querySelectorAll('.front-form');
     const submitButton = document.querySelector('.submit-button');
-
+    const errors = document.querySelectorAll('.just-validate-error-label');
 
     if (submitButton) {
 
-        // submitButton.addEventListener('click', () => {
+        submitButton.addEventListener('click', () => {
             
             forms.forEach(form => {
 
@@ -26,7 +26,7 @@ export let renderForm = () => {
                 validate.onFail(() => {
                 });
             });
-        // })
+        })
     }
 
 }
