@@ -1,4 +1,4 @@
-import '../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js';
+import "../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js";
 
 export let ckeditor = () => {
 
