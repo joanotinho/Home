@@ -585,52 +585,20 @@ footer .copyright {
   margin: 1em;
 }
 
-.error-warning-container {
-  display: none;
+.parent {
+  width: 100%;
 }
-.error-warning-container .error-warning {
-  list-style: disc;
-  background-color: #eee;
-  border-radius: 0.5em;
-  margin: auto;
-  padding: 1em 3em;
+.parent .close-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  margin: 0.5rem 0;
+  width: 95%;
 }
-.error-warning-container .error-warning li {
-  margin: 0.6rem 0;
-}
-.error-warning-container .error-warning span {
-  color: #f00;
-}
-.error-warning-container.active {
-  display: block;
-}
-.error-warning-container .close svg {
-  position: absolute;
-  top: 12.5rem;
-  left: 33rem;
+.parent .close-button svg {
+  color: #222;
   height: 1.2rem;
   width: 1.2rem;
-}
-.error-warning-container .close.active {
-  display: none;
-}
-
-.has-error input, .has-error textarea, .has-error select {
-  border: 0.1em solid #f00;
-}
-.has-error input.active, .has-error textarea.active, .has-error select.active {
-  border: none;
-}
-.has-error .messages {
-  margin-top: 0.4rem;
-}
-.has-error .messages p {
-  color: #f00c;
-  font-size: 0.9rem;
-}
-
-.parent.active {
-  display: none;
 }
 
 .featured-button {
@@ -640,8 +608,8 @@ footer .copyright {
   z-index: 10;
 }
 .featured-button button {
-  background: #001957;
-  background: linear-gradient(90deg, #001957 0%, #060000 84%);
+  background: rgb(0, 25, 87);
+  background: linear-gradient(90deg, rgb(0, 25, 87) 0%, rgb(6, 0, 0) 84%);
   color: #ffffff;
   cursor: pointer;
   padding: 0.5em 2em;
@@ -722,13 +690,29 @@ footer .copyright {
 }
 
 .just-validate-error-label {
-  color: #ccc;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0.5rem;
+  color: #f00;
 }
 
-input.is-invalid {
-  border: 1px solid red;
+.is-invalid {
+  border: 1px solid #f00;
+}
+
+.is-invalid.active {
+  border: none;
+}
+
+.errors-container {
+  display: none;
+  background-color: #ddd;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  padding: 0.5rem 0.8rem;
+}
+.errors-container.active {
+  display: block;
 }
 
 .desktop-cart {
@@ -905,9 +889,8 @@ input.is-invalid {
   width: 90%;
 }
 .contact .contact-main .contact-form form .contact-form-item input, .contact .contact-main .contact-form form .contact-form-item form, .contact .contact-main .contact-form form .contact-form-item textarea {
-  border: none;
   background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: rgb(255, 255, 255);
   border-radius: 0.5em;
   padding: 0.3em;
 }
@@ -919,7 +902,7 @@ input.is-invalid {
   border: none;
 }
 .contact .contact-main .contact-form form .contact-form-item input::placeholder, .contact .contact-main .contact-form form .contact-form-item form::placeholder, .contact .contact-main .contact-form form .contact-form-item textarea::placeholder {
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   transition: all 0.2s ease-out;
 }
@@ -934,17 +917,17 @@ input.is-invalid {
   background-color: rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 0.5em;
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   padding: 0.3em 2em;
 }
 .contact .contact-main .contact-form form .contact-form-item .contact-form-item-button button:focus {
   background-color: rgba(0, 0, 0, 0.1);
-  color: #ffffc8;
+  color: rgb(255, 255, 200);
 }
 .contact .contact-main .contact-form form .contact-form-item .contact-form-item-button button:hover {
   background-color: rgba(0, 0, 0, 0.1);
-  color: #ffffc8;
+  color: rgb(255, 255, 200);
 }
 
 .product-datasheet .product-datasheet-images .product-datasheet-main-image .column {
@@ -966,7 +949,7 @@ input.is-invalid {
   font-weight: 100;
 }
 .product-datasheet .product-datasheet-main .product-datasheet-price span {
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 2.5em;
   font-weight: 600;
 }
@@ -1014,7 +997,7 @@ input.is-invalid {
   width: max-content;
 }
 .product-datasheet .tabs-container .tabs .desktop-three-columns .column .tab span {
-  color: #000b;
+  color: rgba(0, 0, 0, 0.7333333333);
 }
 .product-datasheet .tabs-container .tabs .desktop-three-columns .column .tab.active {
   background-color: #fa0;

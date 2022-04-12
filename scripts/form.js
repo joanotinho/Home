@@ -4,7 +4,8 @@ export let renderForm = () => {
 
     const forms = document.querySelectorAll('.front-form');
     const submitButton = document.querySelector('.submit-button');
-    const errors = document.querySelectorAll('.just-validate-error-label');
+    const errorsContainer = document.querySelector('.errors-container');
+    const elements = document.querySelectorAll('.required');
 
     if (submitButton) {
 
@@ -24,6 +25,10 @@ export let renderForm = () => {
                 })
 
                 validate.onFail(() => {
+                    errorsContainer.classList.add('active');
+                    elements.forEach(element => {
+                        element.classList.remove('active');
+                    });
                 });
             });
         })

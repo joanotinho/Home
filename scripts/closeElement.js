@@ -1,14 +1,13 @@
 export function closeElement() {
-    const closeButton = document.getElementById('close-button');
+    const closeButton = document.querySelector('.close-button');
     const parent = document.querySelector(".parent");
-    const columns = document.querySelectorAll('.column');
+    const elements = document.querySelectorAll('.required');
 
     if (closeButton != null) {
         closeButton.addEventListener('click', () => {
-            closeButton.classList.add('active');
-            parent.classList.add('active');
-            columns.forEach(column => {
-                column.classList.remove('has-error');
+            parent.classList.remove('active');
+            elements.forEach(element => {
+                element.classList.add('active');
             });
         });
     }
